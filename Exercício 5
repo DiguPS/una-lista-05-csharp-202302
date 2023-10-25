@@ -1,0 +1,49 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		 int[] vetor12 = new int[20];
+        int[] PAR = new int[20];
+        int[] IMPAR = new int[20];
+        int i, p = 0, q = 0;
+
+        Console.WriteLine("Digite 20 números inteiros:");
+
+        for (i = 0; i < 20; i++)
+        {
+            Console.Write("Número {0}: ", i + 1);
+            vetor12[i] = Convert.ToInt32(Console.ReadLine());
+
+            if (vetor12[i] % 2 == 0)
+            {
+                PAR[p] = vetor12[i];
+                p++;
+            }
+            else
+            {
+                IMPAR[q] = vetor12[i];
+                q++;
+            }
+        }
+
+        Console.WriteLine("\nVetor original:");
+        for (i = 0; i < 20; i++)
+        {
+            Console.Write(vetor12[i] + " ");
+        }
+
+        Console.WriteLine("\n\nVetor PAR:");
+        for (i = 0; i < p; i++)
+        {
+            Console.Write(PAR[i] + " ");
+        }
+
+        Console.WriteLine("\n\nVetor IMPAR:");
+        for (i = 0; i < q; i++)
+        {
+            Console.Write(IMPAR[i] + " ");
+        }
+    }
+}
